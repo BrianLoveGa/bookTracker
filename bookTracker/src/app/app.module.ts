@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { AddReaderComponent } from './add-reader/add-reader/add-reader.component
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { EditBookComponent } from './edit-book/edit-book/edit-book.component';
 import { EditReaderComponent } from './edit-reader/edit-reader/edit-reader.component';
+import { LoggerService } from './services/logger.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,10 @@ import { EditReaderComponent } from './edit-reader/edit-reader/edit-reader.compo
     AddReaderComponent,
     DashboardComponent,
     EditBookComponent,
-    EditReaderComponent
+    EditReaderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [LoggerService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

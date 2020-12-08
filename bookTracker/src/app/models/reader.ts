@@ -1,5 +1,5 @@
 export class Reader {
-    readerID: number;
+    readerId: number;
     name: string;
     weeklyReadingGoal: number;
     totalMinutesRead: number;
